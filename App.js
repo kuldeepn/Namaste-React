@@ -1,17 +1,12 @@
-/*
-<div id='parent'>
-<div id='child'>
-<h1>hello i'm h1 tag</h1>
-</div>
-</div>
+import React from "react";
+import ReactDOM  from "react-dom/client";
 
-*/
-
+    
 const heading = React.createElement(
   "div",
   { id: "parent" },
   React.createElement("div", { id: "child" }),
-  React.createElement("h1", {}, "I'm h1 tag")
+  React.createElement("h1", {}, "I'm h1 tag hellop")
 );
 
 console.log(heading);
