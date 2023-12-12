@@ -1,21 +1,28 @@
-/*
-<div id='parent'>
-<div id='child'>
-<h1>hello i'm h1 tag</h1>
-</div>
-</div>
+import ReactDOM from "react-dom/client";
+import React from "react";
 
+/*
+Header
+ --Logo
+ --Nav Items
+Body
+--Search
+--RestaurantContainer
+  --RestaurantCard
+Footer
+--Copyright
+--Address
+--Contact 
 */
 
-const heading = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "child" }),
-  React.createElement("h1", {}, "I'm h1 tag")
-);
-
-console.log(heading);
+const AppLayout = () => {
+  return (
+    <div>
+      <h1>Helloh</h1>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+root.render(<AppLayout />);
