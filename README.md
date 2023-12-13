@@ -9,3 +9,10 @@ No, it is not mandatory to use JSX in react we can use React.createElement.
 
 No, ES6 is not mandatory for React we can achieve React by using older scripts as well. 
 
+## How can I write comments in JSX?
+
+{/* This is a JSX comment */}
+
+## What is <React.Fragment></React.Fragment> and <></> ?
+
+
