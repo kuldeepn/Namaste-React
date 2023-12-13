@@ -4,7 +4,8 @@
   "description": "Namaste React from Kuldeep",
   "main": "App.js",
   "scripts": {
-    "test": "test"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/kuldeepn/Namaste-React#readme",
   "devDependencies": {
-    "parcel": "^2.10.1",
+    "parcel": "^2.10.2",
     "process": "^0.11.10"
   },
   "dependencies": {
