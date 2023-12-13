@@ -39,7 +39,9 @@ const RestoCard = (props) => {
   const { name, cuisines, avgRating, sla, cloudinaryImageId, feeDetails } =
     resInfo?.info;
   {
-    /* This is Optional chaining means if suppose object not having particular value then it will not give an error */
+    /* 
+    * *This is Optional chaining means if suppose object not having particular value then it will not give an error 
+      */
   }
 
   return (
