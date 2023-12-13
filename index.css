@@ -14,7 +14,7 @@
 }
 .nav-items > ul {
   padding: 0px 90px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .nav-items > ul > img {
@@ -29,19 +29,21 @@
 
 .res-container {
   display: flex;
-  width: 210px;
+  flex-wrap: wrap;
   text-align: center;
-  position: relative;
 }
 
 .card > img {
-  width: 200px;
+  width: 190px;
   padding: 5px;
 }
 
 .card {
   background-color: aliceblue;
   margin-left: 1rem;
+  margin-top: 1rem;
+  width: 200px;
+  font-size: 15px;
 }
 
 .card:hover {
