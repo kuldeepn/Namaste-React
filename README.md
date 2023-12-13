@@ -21,3 +21,5 @@ Using React.Fragment or the shorthand <> and </> allows you to group elements wi
 
 Virtual DOM is a blueprint of Real DOM whenever particular node changes it checks with Real DOM and only that particular node changes that way react makes faster app reloading.
 
+## What is Reconciliation in React?
+
