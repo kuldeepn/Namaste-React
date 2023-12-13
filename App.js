@@ -38,6 +38,9 @@ const RestoCard = (props) => {
   console.log(resInfo);
   const { name, cuisines, avgRating, sla, cloudinaryImageId, feeDetails } =
     resInfo?.info;
+  {
+    /* This is Optional chaining means if suppose object not having particular value then it will not give an error */
+  }
 
   return (
     <div className="card">
@@ -830,6 +833,7 @@ const resList = [
 const Body = () => {
   return (
     <div className="body">
+      {/* This is JSX comment */}
       <div className="search">Search</div>
       <div className="res-container">
         {resList.map((restaurant) => (
