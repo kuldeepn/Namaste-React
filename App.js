@@ -36,7 +36,8 @@ const Header = () => {
 const RestoCard = (props) => {
   const { resInfo } = props;
   console.log(resInfo);
-  const { name, cuisines, avgRating, sla, cloudinaryImageId } = resInfo?.info;
+  const { name, cuisines, avgRating, sla, cloudinaryImageId, feeDetails } =
+    resInfo?.info;
 
   return (
     <div className="card">
@@ -47,6 +48,7 @@ const RestoCard = (props) => {
         }
       />
       <h2>{name}</h2>
+      <h3>Cost {feeDetails.totalFee / 10} ₹</h3>
       <h3>{cuisines.join(", ")}</h3>
       <h4>Delivery Time {sla.deliveryTime} Mins</h4>
       <h5>{avgRating} Stars</h5>

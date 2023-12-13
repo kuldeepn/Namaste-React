@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header > img {
@@ -15,6 +16,10 @@
 .nav-items > ul {
   padding: 0px 90px;
   font-size: 22px;
+}
+
+.nav-items > ul > li:hover {
+  color: #fc8019;
 }
 
 .nav-items > ul > img {
@@ -35,6 +40,7 @@
 
 .card > img {
   width: 190px;
+  height: 150px;
   padding: 5px;
 }
 
@@ -44,6 +50,7 @@
   margin-top: 1rem;
   width: 200px;
   font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card:hover {
