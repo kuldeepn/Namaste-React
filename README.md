@@ -39,4 +39,12 @@ case React will render that particular element only.
 
 ## Can we use index as keys in React?
 
-It is not recomended to use index as key but if last option is not there in that case we can usen
+It is not recomended to use index as key but if last option is not there in that case we can use
+
+## What is props in React? Ways to
+
+Porps are like parameters to the components in react. So basically it is object only it stands for properties
+
+## What is a Config Driven UI ?
+
+Config driven UI is the UI which we can control through configuration.
