@@ -10,7 +10,7 @@ No, ES6 is not mandatory for React we can achieve React by using older scripts a
 
 ## How can I write comments in JSX?
 
-{/_ This is a JSX comment _/}
+{/_This is a JSX comment _/} \_ replace with \*
 
 ## What is <React.Fragment></React.Fragment> and <></> ?
 
