@@ -39,4 +39,4 @@ case React will render that particular element only.
 
 ## Can we use index as keys in React?
 
-It is not recomended to use index as key but if last option is not there in that case we can use
+It is not recomended to use index as key but if last option is not there in that case we can usen  
