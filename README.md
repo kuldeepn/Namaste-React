@@ -48,3 +48,19 @@ Porps are like parameters to the components in react. So basically it is object 
 ## What is a Config Driven UI ?
 
 Config driven UI is the UI which we can control through configuration.
+
+# Blue Print
+
+/_
+Header
+--Logo
+--Nav Items
+Body
+--Search
+--RestaurantContainer
+--RestaurantCard
+Footer
+--Copyright
+--Address
+--Contact
+_/
