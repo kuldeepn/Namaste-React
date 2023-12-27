@@ -14,10 +14,11 @@ A `config.js` file in a React project, it likely contains custom configurations 
 ## What are React Hooks?
 
 React hooks we can say a normal JS functions which has some logic behind it. These are pre-defined functions in react.
-`Eg. useState()` -> It is used to create superpowerful variables
-const [hello,setHello]=useState([])
-`hello & setHello` are state variable
-`[]` Initial value of state variable
+
+- `Eg. useState()` -> It is used to create superpowerful variables.
+- const [hello,setHello]=useState([])
+- `hello & setHello`-> are state variable
+- `[]` -> Initial value of state variable
 
 ## Why do we need a `useState` Hook?
 
