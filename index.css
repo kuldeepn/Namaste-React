@@ -60,3 +60,21 @@
   cursor: pointer;
   box-shadow: inset;
 }
+
+.shimmer-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card{
+  width: 200px;
+  height: 350px;
+  background-color: rgb(226, 219, 219);
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.filter-btn{
+  margin-left: 1rem;
+}

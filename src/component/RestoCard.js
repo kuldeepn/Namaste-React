@@ -15,7 +15,7 @@ const RestoCard = (props) => {
     <div className="card">
       <img src={CDN_URL + cloudinaryImageId} />
       <h2>{name}</h2>
-      <h3>Cost {feeDetails.totalFee / 10} ₹</h3>
+      {/* <h3>Cost {feeDetails.totalFee / 10} ₹</h3> */}
       <h3>{cuisines.join(", ")}</h3>
       <h4>Delivery Time {sla.deliveryTime} Mins</h4>
       <h5>{avgRating} Stars</h5>
