@@ -1,6 +1,6 @@
 # Assignment-06-Exploring the World
 
-## What is a Microservice?
+## Q.1 What is a Microservice?
 
 Microservice is a project architecture which industry follows. It called as `signle responsibilty architecture or separation of concerns`.
 
@@ -9,12 +9,12 @@ Microservice is a project architecture which industry follows. It called as `sig
 - All these services are running on different ports like UI:1234, BE:3000 & etc.
 - So these all MS are connected through domain URL like for BE it will be like /Api.
 
-## What is Monolith architecture?
+## Q.2 What is Monolith architecture?
 
 - Monolith architecture has all service binded means all are dependent and it is big project in one bucket.
 - If suppose we need to build new feature like changing color of button then in that case we have to compile all UI code and BE code and everything inside that project and again deploy in production.
 
-## What is the difference between Monolith and Microservice?
+## Q.3 What is the difference between Monolith and Microservice?
 
 ### Monolith
 
@@ -28,13 +28,13 @@ Microservice is a project architecture which industry follows. It called as `sig
 - Because all services are independent it fasten the process of developer experience
 - We can build all services in different language `like UI in React and BE in Jave or any.`
 
-## Why do we need a useEffect Hook?
+## Q.4 Why do we need a useEffect Hook?
 
 - So when we need to render our component first and after that API contents.
 - So to render things after components renders then we need useEffect.
 - `Syntax: useEffect(()=>{},[])`
 
-## What is Optional Chaining?
+## Q.5 What is Optional Chaining?
 
 Optional chaining means it allows to access properties or method of an object without checking it is defined or not.
 `Eg.`
@@ -71,7 +71,7 @@ console.log(person.gender?.street);
  undefined
 ```
 
-it will not return an error means it will not break the code istead it will return undefined
+it will not return an error means it will not break the code istead of it will return undefined
 
 # Blue Print
 
