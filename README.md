@@ -73,6 +73,28 @@ console.log(person.gender?.street);
 
 it will not return an error means it will not break the code istead of it will return undefined
 
+## Q.6 What is Shimmer UI?
+
+A UI which fake's the actual UI called as `Shimmer UI`. It is like skeleton of page.
+
+## Q.7 What is the difference between JS expression and JS statement.
+
+- `Value Output:` Expressions always evaluate to a value, whereas statements may or may not produce a value.
+- `Usage:` Expressions can be used within statements, but statements cannot be used inside expressions.
+
+## Q.8 What is Conditional Rendering, explain with a code example
+
+The rendering which is based on the condition called as conditional rendering.
+`Eg.  `
+
+```javascript
+student.length==0?<Shimmer/>:return()
+```
+
+So here if condition is true it will return shimmer ui otherwise it will return whaterver inside the return statement.
+
+## Q.10 What is CORS?
+
 # Blue Print
 
 /_
