@@ -93,7 +93,28 @@ student.length==0?<Shimmer/>:return()
 
 So here if condition is true it will return shimmer ui otherwise it will return whaterver inside the return statement.
 
-## Q.10 What is CORS?
+## Q.9 What is CORS?
+
+- CORS stands for Cross-Origin Resource Sharing. It's a security feature implemented in web browsers that controls access to resources on a web page from a different origin (domain, protocol, or port) than the one from which the resource originated.
+- So it is restricted from accessing local to web server.
+- So we need to install Allow CORS extension or in server Access-Control-Allow-Headers.
+
+## Q.10 What is aync and await?
+
+- `async await` are feature of javascript to achive asyncronous operation in synchronous way.
+- whenever `async` keyword is used infront of function it always returns a promise by using `await` keyword inside it.
+- `await` kwyword make sure it resolves whenever promise returns something.
+
+```javascript
+const Data = async () => {
+  const result = await fetchData();
+  console.log(result);
+};
+```
+
+## Q.11 What is the use of `const json = await data.json();` in getRestaurants() ?
+
+- It gives the json formated data received from the response here `data` is the response.
 
 # Blue Print
 
