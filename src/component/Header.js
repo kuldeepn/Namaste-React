@@ -30,14 +30,18 @@ const Header = () => {
           </li>
           <li>Cart</li>
           <li>
-            <button
-              onClick={() => {
-                newName = "Logout";
-                btnName === "Login" ? setbtnName(newName) : setbtnName("Login");
-              }}
-            >
-              {btnName}
-            </button>
+            <Link to={"/login"}>
+              <button
+                onClick={() => {
+                  newName = "Logout";
+                  btnName === "Login"
+                    ? setbtnName(newName)
+                    : setbtnName("Login");
+                }}
+              >
+                {btnName}
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

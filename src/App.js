@@ -8,6 +8,7 @@ import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestMenu from "./component/RestMenu";
+import LoginForm from "./component/LoginForm";
 
 const AppLayout = () => {
   return (
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/restmenu/:resId",
         element: <RestMenu />,
+      },
+      {
+        path: "/login",
+        element: <LoginForm />,
       },
     ],
     errorElement: <Error />,
