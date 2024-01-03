@@ -36,7 +36,7 @@ import myImage from "./path/image.jpg";
 ## Q.4 What is SPA?
 
 - A single page application means just to navigate between components.
-- Whenever our app loads it load all our code so by using react router <Link> we can switch between components so it makes it is a SPA.
+- Whenever our app loads it load all our code so by using react router `<Link>` we can switch between components so it makes it is a SPA.
 
 ## Q.5 What is difference between Client Side Routing and Server Side Routing?
 
