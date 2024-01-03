@@ -5,6 +5,8 @@ import { MENU_API } from "../utils/constants";
 
 const RestMenu = () => {
   const [resItem, setResItem] = useState(null);
+  console.log(useState());
+
   const { resId } = useParams();
 
   useEffect(() => {
@@ -15,11 +17,10 @@ const RestMenu = () => {
     const data = await fetch(MENU_API + resId);
 
     const json = await data.json();
-    console.log(json);
+
     setResItem(json.data);
   };
 
-  console.log(resItem);
   if (resItem === null) return <Shimmer />;
 
   const { name, costForTwoMessage, cuisines } =

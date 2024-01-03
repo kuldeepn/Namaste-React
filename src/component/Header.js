@@ -7,18 +7,26 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img src={LOGO} />
+      <Link to={"/"}>
+        <img src={LOGO} className="header-image" />
+      </Link>
 
       <div className="nav-items">
         <ul>
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={"/about"}>About Us</Link>
+            <Link to={"/about"} style={{ textDecoration: "none" }}>
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Contact Us</Link>
+            <Link to={"/contact"} style={{ textDecoration: "none" }}>
+              Contact Us
+            </Link>
           </li>
           <li>Cart</li>
           <li>

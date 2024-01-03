@@ -72,7 +72,11 @@ const Body = () => {
       <div className="res-container">
         {searchRes.map((rest) => {
           return (
-            <Link to={"/restmenu/" + rest.info.id} key={rest.info.id}>
+            <Link
+              to={"/restmenu/" + rest.info.id}
+              key={rest.info.id}
+              style={{ textDecoration: "none" }}
+            >
               <RestoCard resInfo={rest} />
             </Link>
           );
