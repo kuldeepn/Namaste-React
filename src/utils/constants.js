@@ -6,3 +6,6 @@ export const CDN_URL =
 
 export const CART =
   "https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-food-cart-line-icon-vector-png-image_6701298.png";
+
+export const MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5904779&lng=73.7271909&restaurantId=";

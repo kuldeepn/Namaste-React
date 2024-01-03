@@ -2,6 +2,7 @@ import RestoCard from "./RestoCard";
 
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [topRes, setTopRes] = useState([]);
@@ -24,11 +25,11 @@ const Body = () => {
       );
       const json = await data.json();
       setTopRes(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setSearchRes(
-        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
     } catch (error) {
@@ -70,7 +71,11 @@ const Body = () => {
       </div>
       <div className="res-container">
         {searchRes.map((rest) => {
-          return <RestoCard key={rest.info.id} resInfo={rest} />;
+          return (
+            <Link to={"/restmenu/" + rest.info.id} key={rest.info.id}>
+              <RestoCard resInfo={rest} />
+            </Link>
+          );
         })}
       </div>
     </div>

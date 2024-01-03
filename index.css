@@ -16,6 +16,7 @@
 .nav-items > ul {
   padding: 0px 90px;
   font-size: 22px;
+
 }
 
 .nav-items > ul > li:hover {
@@ -26,6 +27,7 @@
   width: 50px;
   margin-top: 1px;
   margin-left: 2rem;
+  
 }
 
 .search {
