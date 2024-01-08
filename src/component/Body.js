@@ -25,21 +25,24 @@ const Body = () => {
       );
       const json = await data.json();
       setTopRes(
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setSearchRes(
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
+      // console.log(
+      //   json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      //     ?.restaurants
+      // );
+      console.log(json);
     } catch (error) {
       alert("Error in data fetching");
     }
-
-    // console.log(
-    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
   };
+
+  console.log(topRes);
 
   // *Conditonal rendering
   return topRes.length === 0 ? (
