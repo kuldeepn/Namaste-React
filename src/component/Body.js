@@ -25,11 +25,11 @@ const Body = () => {
       );
       const json = await data.json();
       setTopRes(
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       setSearchRes(
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
       );
       // console.log(

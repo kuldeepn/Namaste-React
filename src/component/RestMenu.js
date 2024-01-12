@@ -5,7 +5,6 @@ import { MENU_API } from "../utils/constants";
 
 const RestMenu = () => {
   const [resItem, setResItem] = useState(null);
-  console.log(useState());
 
   const { resId } = useParams();
 
