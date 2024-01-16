@@ -3,6 +3,7 @@ import RestoCard from "./RestoCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [topRes, setTopRes] = useState([]);
@@ -21,16 +22,16 @@ const Body = () => {
   const fetchData = async () => {
     try {
       const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5904779&lng=73.7271909&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5904779&lng=73.7271909&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
       );
       const json = await data.json();
       setTopRes(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
+          ?.restaurants,
       );
       setSearchRes(
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
+          ?.restaurants,
       );
       // console.log(
       //   json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
@@ -43,6 +44,12 @@ const Body = () => {
   };
 
   console.log(topRes);
+
+  const online = useOnlineStatus();
+
+  if (!online) {
+    return <h1>You are Offline please check your internet</h1>;
+  }
 
   // *Conditonal rendering
   return topRes.length === 0 ? (
@@ -61,7 +68,7 @@ const Body = () => {
         <button
           onClick={() => {
             const filteredRes = topRes.filter((res) =>
-              res.info.name.toLowerCase().includes(searchTxt.toLowerCase())
+              res.info.name.toLowerCase().includes(searchTxt.toLowerCase()),
             );
             setSearchRes(filteredRes);
           }}
