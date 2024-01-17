@@ -1,14 +1,17 @@
 import ReactDOM from "react-dom/client";
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "../index.css";
 import Header from "./component/Header";
 import Body from "./component/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import About from "./component/About";
+// import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestMenu from "./component/RestMenu";
 import LoginForm from "./component/LoginForm";
+import Shimmer from "./component/Shimmer";
+
+const About = lazy(() => import("./component/About"));
 
 const AppLayout = () => {
   return (
@@ -31,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
