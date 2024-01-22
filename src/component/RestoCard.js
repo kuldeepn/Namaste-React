@@ -14,7 +14,7 @@ const RestoCard = (props) => {
   }
 
   return (
-    <div className="m-4 p-4 w-[220px] h-[320px] bg-slate-200 rounded-xl">
+    <div className="m-4 p-4 w-[220px] h-[320px] bg-slate-200 rounded-xl shadow-2xl">
       <img className="p-[5px] w-[250px] h-[150px] rounded-xl" src={CDN_URL + cloudinaryImageId} />
       <h2 className="text-lg font-bold py-1 font-roboto">{name}</h2>
       {/* <h3>Cost {feeDetails.totalFee / 10} ₹</h3> */}
