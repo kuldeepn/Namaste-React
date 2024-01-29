@@ -12,28 +12,23 @@ const RestMenu = () => {
   const { name, costForTwoMessage, cuisines } =
     resItem?.cards[0]?.card?.card?.info;
 
-  const resItemCategory =
-    resItem?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-
-  console.log(resItemCategory);
-
   const filteredItems =
     resItem?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  
-  console.log(filteredItems);
 
   return (
     <div className="text-center m-4 ">
       <h1 className="font-bold text-2xl">{name}</h1>
-      <p className="font-thin font-semibold">
+      <p className="font-thin">
         {cuisines.join(", ")} {costForTwoMessage}
       </p>
-      <ItemCategory category={filteredItems} />
+
+      {filteredItems.map((cat) => (
+        <ItemCategory data={cat.card.card} key={cat.card.card.title} />
+      ))}
     </div>
   );
 };
