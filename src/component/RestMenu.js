@@ -24,10 +24,7 @@ const RestMenu = () => {
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory",
     );
 
-  const fun = () => {
-    console.log("fun called");
-  };
-
+  
   console.log(filteredItems);
 
   return (
@@ -36,7 +33,7 @@ const RestMenu = () => {
       <p className="font-thin font-semibold">
         {cuisines.join(", ")} {costForTwoMessage}
       </p>
-      <ItemCategory category={fun} />
+      <ItemCategory category={filteredItems} />
     </div>
   );
 };
