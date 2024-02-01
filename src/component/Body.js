@@ -18,8 +18,6 @@ const Body = () => {
     setFilter(latestTopRes);
   };
 
-  console.log(topRes);
-
   if (!online) {
     return <h1>You are Offline please check your internet</h1>;
   }
@@ -43,7 +41,7 @@ const Body = () => {
           className="px-2 py-1 mx-3 bg-orange-500 rounded-sm text-slate-50 hover:bg-orange-600"
           onClick={() => {
             const filteredRes = topRes.filter((res) =>
-              res.info.name.toLowerCase().includes(searchTxt.toLowerCase()),
+              res.info.name.toLowerCase().includes(searchTxt.toLowerCase())
             );
             setFilter(filteredRes);
           }}
@@ -60,7 +58,11 @@ const Body = () => {
       <div className="flex flex-wrap">
         {(filter.length === 0 ? searchRes : filter).map((rest) => {
           return (
-            <Link to={"/restmenu/" + rest.info.id} key={rest.info.id}>
+            <Link
+              to={"/restmenu/" + rest.info.id}
+              key={rest.info.id}
+              className="hover:scale-95"
+            >
               {rest.info.isOpen ? (
                 <PromotedLableComponent resInfo={rest} />
               ) : (

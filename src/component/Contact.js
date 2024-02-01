@@ -1,15 +1,8 @@
 import { useEffect } from "react";
-
+import CardShimmer from "./CardShimmer";
 
 const Contact = () => {
-
-
-
-  return (
-    <div>
-      <h1>Contact Us</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Contact;

@@ -4,16 +4,27 @@ import "../index.css";
 import Header from "./component/Header";
 import Body from "./component/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import About from "./component/About";
 import Contact from "./component/Contact";
 import Error from "./component/Error";
 import RestMenu from "./component/RestMenu";
 import LoginForm from "./component/LoginForm";
 import Shimmer from "./component/Shimmer";
+import { useEffect } from "react";
+import UserContext from "./utils/UserContext";
+import { useState } from "react";
 
 const About = lazy(() => import("./component/About"));
 
 const AppLayout = () => {
+  [newName, setNewName] = useState();
+
+  useEffect(() => {
+    const data = {
+      name: "Teju",
+    };
+    setNewName(data.name);
+  }, []);
+
   return (
     <div>
       <Header />

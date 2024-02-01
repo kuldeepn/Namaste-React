@@ -20,31 +20,28 @@ const LoginForm = () => {
         alert(JSON.stringify(values, null, 2));
       }}
     >
-      <Form className="flex justify-center items-center h-96">
+      <Form className="max-w-sm mx-auto mt-10">
         <div className="w-96 p-4 bg-slate-200 rounded-md shadow-2xl">
           <h1 className="font-bold font-roboto text-2xl text-center">Login</h1>
-        
-        <MyTextInput
-          label="Email Address"
-          name="email"
-          type="email"
-          placeholder="example@gmail.com"
-        />
-        
 
-        <div className="pwd-label">
           <MyTextInput
-            label="Password"
-            name="password"
-            type="text"
-            placeholder="Enter your password..."
+            label="Email Address"
+            name="email"
+            type="email"
+            placeholder="example@gmail.com"
           />
-        </div>
-      <div className='bg-orange-500 text-white w-full text-center rounded-md py-2 font-mono '>
-        <button type="submit">
-          LOGIN
-        </button>
-        </div>
+
+          <div className="pwd-label">
+            <MyTextInput
+              label="Password"
+              name="password"
+              type="text"
+              placeholder="Enter your password..."
+            />
+          </div>
+          <div className="bg-orange-500 text-white w-full text-center rounded-md py-2 font-mono">
+            <button type="submit">LOGIN</button>
+          </div>
         </div>
       </Form>
     </Formik>

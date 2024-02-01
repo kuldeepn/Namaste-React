@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO } from "../utils/constants";
 import { Link } from "react-router-dom";
-import Cart from "../utils/icons/Cart"
+import Cart from "../utils/icons/Cart";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
+
+  const { loggedin } = useContext(UserContext);
 
   return (
     <div className="flex justify-between shadow-lg ">
@@ -16,7 +19,9 @@ const Header = () => {
 
       <div className="">
         <ul className="flex m-4 p-4 font-roboto">
-          <li className="px-4 hover:text-orange-500">Online Status:{onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="px-4 hover:text-orange-500">
+            Online Status:{onlineStatus ? "🟢" : "🔴"}
+          </li>
           <li className="px-4  hover:text-orange-500">
             <Link to={"/"}>Home</Link>
           </li>
@@ -30,7 +35,9 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li className="px-4"><Cart/></li>
+          <li className="px-4">
+            <Cart />
+          </li>
           <li className="px-4  hover:text-orange-500">
             <Link to={"/login"}>
               <button
@@ -41,9 +48,10 @@ const Header = () => {
                     : setbtnName("Login");
                 }}
               >
-                {btnName}
+                {btnName}:
               </button>
             </Link>
+            <span> {loggedin}</span>
           </li>
         </ul>
       </div>
