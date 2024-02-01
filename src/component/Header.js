@@ -20,7 +20,15 @@ const Header = () => {
       <div className="">
         <ul className="flex m-4 p-4 font-roboto">
           <li className="px-4 hover:text-orange-500">
-            Online Status:{onlineStatus ? "🟢" : "🔴"}
+            Online Status:
+            {onlineStatus ? (
+              <span className="h-3 w-3 flex absolute -mt-[19px] mx-[105px]">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-700"></span>
+              </span>
+            ) : (
+              "🔴"
+            )}
           </li>
           <li className="px-4  hover:text-orange-500">
             <Link to={"/"}>Home</Link>
