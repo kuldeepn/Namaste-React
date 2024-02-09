@@ -6,7 +6,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurant from "../utils/useRestaurant";
 
 const Body = () => {
-  const [searchTxt, setSearchTxt] = useState([]);
+  const [searchTxt, setSearchTxt] = useState("");
   const [filter, setFilter] = useState([]); // *uses for data cleaning the data receiving from useRestaurant
   const { topRes, searchRes } = useRestaurant();
   const online = useOnlineStatus();
@@ -16,6 +16,25 @@ const Body = () => {
   const handleFilter = () => {
     let latestTopRes = searchRes.filter((res) => res.info.avgRating > 4);
     setFilter(latestTopRes);
+  };
+
+  const filterData = (searchTxt, restaurants) => {
+    const filteredNewData = restaurants.filter((res) =>
+      res.info.name.toLowerCase().includes(searchTxt.toLowerCase())
+    );
+    return filteredNewData;
+  };
+
+  const serachData = (searchTxt, restaurants) => {
+    if (searchTxt !== "") {
+      const filteredRes = filterData(searchTxt, restaurants);
+      setFilter(filteredRes);
+      // if(filteredRes.lenght==0){
+
+      // }
+    } else {
+      setFilter(restaurants);
+    }
   };
 
   if (!online) {
@@ -35,15 +54,13 @@ const Body = () => {
           value={searchTxt}
           onChange={(e) => {
             setSearchTxt(e.target.value);
+            serachData(e.target.value, topRes);
           }}
         ></input>
         <button
           className="px-2 py-1 mx-3 bg-orange-500 rounded-sm text-slate-50 hover:bg-orange-600"
           onClick={() => {
-            const filteredRes = topRes.filter((res) =>
-              res.info.name.toLowerCase().includes(searchTxt.toLowerCase())
-            );
-            setFilter(filteredRes);
+            serachData(searchTxt, topRes);
           }}
         >
           Search

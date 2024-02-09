@@ -1,11 +1,11 @@
 import MenuItems from "./MenuItems";
 
 const ItemCategory = ({ data, showItem, setShowItem }) => {
-  console.log(data);
-
   const accordianHandler = () => {
     setShowItem();
   };
+
+  // console.log(data.itemCards);
 
   return (
     <div className="bg-gray-200 w-6/12 mx-auto">

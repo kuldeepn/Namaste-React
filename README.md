@@ -1,24 +1,58 @@
-# Assignment-11-Data is the new oil
+# Assignment-12-Let's Build Our Store
 
-## Q.1 What is prop drilling?
+## Q.1 useContext vs Redux
 
-- Prop drilling is nothing but sharing the props to the nested components where mediator components are just the mediator for sharing the props.
-- For example component A is a parent of B and B is a parent of C now if component want to share the props with component C so A has to use component B to reach C that is called as props driliing.
+`useContext` and Redux are both state management tools in React, but they serve different purposes and have some key differences. Let's explore each one:
 
-## Q.2 What is lifting the state up?
+### `useContext`:
 
-- Lifting the state up means parent controlling the child component that is called as `controlled component` and the component which has it's own state and managing by itself knows as `uncontrolled component`.
+1. **Core Purpose:**
 
-## Q.3 What is Context Provider and Context Consumer?
+   - `useContext` is a React Hook that allows you to subscribe to React context without introducing a global state management library.
+   - It is used for sharing values like themes, authentication status, or any other data between components without having to pass props through every level of the component tree.
 
-`Context Provider`
+2. **Scope:**
 
-- Context Proider is used to provide the context props to throughout the app & whenever we need to update the default value at that time we can use the context provider.
+   - Limited to the component tree where the context provider is placed. It's generally best suited for smaller to medium-sized applications.
 
-`Context Consumer`
+3. **Simplicity:**
 
-- Context Consumer is alternative way of hook useContext generally used for class based components
+   - Simpler to set up and use compared to Redux, especially for smaller projects.
 
-## Q.4 If you don’t pass a value to the provider does it take the default value?
+4. **Integration:**
+   - Built into React, so there's no need to install additional libraries.
 
-- No it will throw an error because whenever we are using provider we have to mention the value prop for it.
+### Redux:
+
+1. **Core Purpose:**
+
+   - Redux is a global state management library for managing complex state in larger applications.
+   - It provides a centralized store that holds the entire state of the application, and components can interact with this store through actions and reducers.
+
+2. **Scope:**
+
+   - Global state management, suitable for large-scale applications where managing state in a centralized manner becomes crucial.
+
+3. **Predictability and Control:**
+
+   - Redux enforces a unidirectional data flow and a predictable state, which can make it easier to reason about the state changes in the application.
+
+4. **Middleware:**
+   - Redux supports middleware, allowing you to introduce custom logic between the dispatching of an action and the moment it reaches the reducer. This is beneficial for tasks like asynchronous operations.
+
+### When to use each:
+
+- **Use `useContext` when:**
+
+  - You have a small to medium-sized application.
+  - The state you're managing is localized to a specific part of your component tree.
+  - You want a simple and straightforward solution without introducing additional dependencies.
+
+- **Use Redux when:**
+  - You have a larger application with complex state management needs.
+  - You need a predictable state container and a clear way to manage actions and side effects.
+  - Inter-component communication becomes challenging without a centralized state.
+
+### Combining `useContext` and Redux:
+
+It's also worth noting that you can use both in the same application. For instance, you might use `useContext` for simple local state management within certain components and use Redux for managing the global state of the application. This hybrid approach allows you to leverage the simplicity of `useContext` where appropriate and the power of Redux for more complex state scenarios.

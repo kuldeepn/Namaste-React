@@ -1,15 +1,20 @@
 import { useContext, useState } from "react";
 import { LOGO } from "../utils/constants";
 import { Link } from "react-router-dom";
-import Cart from "../utils/icons/Cart";
+import CartIcon from "../utils/icons/CartIcon";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
 
   const { loggedin } = useContext(UserContext);
+
+  const cartItem = useSelector((store) => store.cart.item);
+
+  console.log(cartItem);
 
   return (
     <div className="flex justify-between shadow-lg ">
@@ -23,8 +28,8 @@ const Header = () => {
             Online Status:
             {onlineStatus ? (
               <span className="h-3 w-3 flex absolute -mt-[19px] mx-[105px]">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-700"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-700"></span>
               </span>
             ) : (
               "🔴"
@@ -43,10 +48,23 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
+
           <li className="px-4">
-            <Cart />
+            <Link to={"/cart"}>
+              <CartIcon />
+              <span
+                className={cartItem.length == 0 ? "text-black" : "text-white"}
+              >
+                <span className="absolute px-2 text-sm top-[36px] font-bold">
+                  {cartItem.length}
+                </span>
+              </span>
+            </Link>
           </li>
-          <li className="px-4  hover:text-orange-500">
+          <span className="-mx-2 hover:text-orange-500">
+            <Link to={"/cart"}>Cart</Link>
+          </span>
+          <li className="px-4 mx-4 hover:text-orange-500">
             <Link to={"/login"}>
               <button
                 onClick={() => {

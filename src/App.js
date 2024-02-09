@@ -10,8 +10,10 @@ import RestMenu from "./component/RestMenu";
 import LoginForm from "./component/LoginForm";
 import Shimmer from "./component/Shimmer";
 import { useEffect } from "react";
-import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
 import { useState } from "react";
+import reduxStore from "./utils/reduxStore";
+import Cart from "./component/Cart";
 
 const About = lazy(() => import("./component/About"));
 
@@ -26,10 +28,12 @@ const AppLayout = () => {
   }, []);
 
   return (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+    <Provider store={reduxStore}>
+      <div>
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 
@@ -62,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginForm />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
