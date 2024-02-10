@@ -56,3 +56,41 @@
 ### Combining `useContext` and Redux:
 
 It's also worth noting that you can use both in the same application. For instance, you might use `useContext` for simple local state management within certain components and use Redux for managing the global state of the application. This hybrid approach allows you to leverage the simplicity of `useContext` where appropriate and the power of Redux for more complex state scenarios.
+
+## Q.2 Advantage of using Redux Toolkit over Redux
+
+- Became more simpler compare to Redux.
+- Configuring a Redux store was too complicated in Redux that minimizes Redux Toolkit.
+- No need to add so many packages compare to Redux.
+- Redux toolkit doesn't requires to much boilerplate code.
+
+## Q.3 Explain Dispatcher
+
+**`Dispatcher`**
+
+Dispatcher is a hook which is used to dispatch an action to a reducer function.
+Explain Dispatcher.
+
+## Q.4 Explain Reducer
+
+**`Reducer`**
+
+Reducer is a function which is intented to do some operation whenever action invoked.
+
+## Q.5 Explain slice
+
+**`Slice`**
+
+Slice is a part of a store which contains name of slice, initial state and actions with reducer funciton.
+
+## Q.6 Explain selector
+
+**`Selector`**
+
+Selector is again a hook which is used to subscribe the store which has one callback function.
+
+## Q.7 Explain createSlice and the configuration it takes
+
+- createSlice is a function having object theat object contains name,initialState and reducers.
+- `Reducers` has bunch of actions
+- We have to export actions and reducers like for ex. const {addItem}= cartSlice.actions & cartSlice.reducer
